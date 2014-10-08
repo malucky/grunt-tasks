@@ -1,0 +1,55 @@
+---
+default:
+  - "build"
+
+build:
+  - "jshint:all"
+  - "clean:build"
+  - "copy:build_js"
+  - "copy:build_static"
+  - "html2js:build"
+  - "sass:build"
+  - "i18n-compile"
+
+deploy:
+  - "build"
+  - "clean:dist"
+  - "cssmin:deploy"
+  - "ngAnnotate:deploy"
+  - "uglify:deploy"
+  - "copy:deploy"
+  - "karma:deploy"
+
+release:
+  - "checkbranch:master"
+  - "prompt:deploy"
+
+transclude:
+  - "build"
+  - "karma:once"
+  - "clean:transclude"
+  - "copy:transclude"
+
+coverage:
+  - "clean:coverage"
+  - "build"
+  - "karma:coverage"
+
+unit:
+  - "build"
+  - "karma:once"
+
+e2e:
+  - "transclude"
+  - "protractor:e2e"
+
+run:
+  - "transclude"
+  - "karma:watch"
+  - "watch"
+
+i18n-extract:
+  - "nggettext_extract"
+
+i18n-compile:
+  - "nggettext_compile"

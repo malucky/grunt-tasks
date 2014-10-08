@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/malucky/grunt-tasks.git"
   },
-  "devDependencies": {
+  "dependencies": {
     "grunt-cli": "0.1.13",
     "grunt": "0.4.x",
     "grunt-angular-gettext": "0.2.3",

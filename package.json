@@ -2,6 +2,7 @@
   "name": "grunt-tasks-ray-ma",
   "author": "Bigcommerce",
   "private": true,
+  "version": "0.0.1",
   "description": "Bigcommerce Micro-App",
   "repository": {
     "type": "git",
